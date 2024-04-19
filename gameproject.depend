@@ -1,0 +1,1042 @@
+# depslib dependency file v1.0
+1713536361 source:g:\gameproject\gameproject\main.cpp
+	<iostream>
+	"GameFunction.h"
+	"BaseObject.h"
+	"GmeMap.h"
+	"Warrior.h"
+	"Timer.h"
+	"ThreatObjects.h"
+	"Explosion.h"
+	"TextManager.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_guid.h"
+	"SDL_haptic.h"
+	"SDL_hidapi.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<winsdkver.h>
+	<sdkddkver.h>
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_platform.h
+	<AvailabilityMacros.h>
+	<TargetConditionals.h>
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\begin_code.h
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\close_code.h
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<lsxintrin.h>
+	<lasxintrin.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_guid.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_guid.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_hidapi.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1711425918 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_gamecontroller.h"
+	"SDL_guid.h"
+	"SDL_haptic.h"
+	"SDL_hidapi.h"
+	"SDL_hints.h"
+	"SDL_joystick.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_metal.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_shape.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"SDL_locale.h"
+	"SDL_misc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<wchar.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	<sal.h>
+	"begin_code.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+	"SDL_platform.h"
+	<winsdkver.h>
+	<sdkddkver.h>
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+	<AvailabilityMacros.h>
+	<TargetConditionals.h>
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\begin_code.h
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\close_code.h
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<sys/cpuinline.h>
+	<mbarrier.h>
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<endian.h>
+	<endian.h>
+	<sys/endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	<process.h>
+	<process.h>
+	<stdlib.h>
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<arm_neon.h>
+	<altivec.h>
+	<arm_neon.h>
+	<armintr.h>
+	<arm_neon.h>
+	<arm64intr.h>
+	<arm64_neon.h>
+	<mm3dnow.h>
+	<lsxintrin.h>
+	<lasxintrin.h>
+	<immintrin.h>
+	<mmintrin.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	<pmmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+	"SDL_stdinc.h"
+	"SDL_endian.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_guid.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_guid.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_sensor.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1709678383 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1712819857 g:\gameproject\gameproject\src\core\engine.h
+	"SDL.h"
+	"SDL_image.h"
+	"GameMap.h"
+
+1704144973 c:\users\hirai\downloads\sdl2_image-devel-2.8.2-mingw\sdl2_image-2.8.2\x86_64-w64-mingw32\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1712425645 g:\gameproject\gameproject\src\map\map.h
+	<vector>
+	"Layer.h"
+
+1712596961 g:\gameproject\gameproject\src\map\layer.h
+
+1713535309 g:\gameproject\gameproject\src\timer\timer.h
+
+1712846501 source:g:\gameproject\gameproject\src\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1712846501 g:\gameproject\gameproject\src\animation\animation.h
+	"SDL.h"
+	<string>
+
+1712675754 g:\gameproject\gameproject\src\graphics\texturemanager.h
+	<string>
+	"SDL.h"
+	<map>
+
+1712930087 source:g:\gameproject\gameproject\src\graphics\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+	"Camera.h"
+
+1712587829 source:g:\gameproject\gameproject\src\inputs\input.cpp
+	"Input.h"
+	"Engine.h"
+
+1712586625 g:\gameproject\gameproject\src\inputs\input.h
+	"SDL.h"
+
+1712676312 source:g:\gameproject\gameproject\src\map\mapparser.cpp
+	"MapParser.h"
+
+1712676312 g:\gameproject\gameproject\src\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	"TileLayer.h"
+	"tinyxml.h"
+
+1712600071 g:\gameproject\gameproject\src\vendor\tinyxml\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1712600071 g:\gameproject\gameproject\src\vendor\tinyxml\tinystr.h
+	<assert.h>
+	<string.h>
+
+1712755484 g:\gameproject\gameproject\src\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1712676586 source:g:\gameproject\gameproject\src\map\tilelayer.cpp
+	"TileLayer.h"
+	"TextureManager.h"
+
+1713535343 source:g:\gameproject\gameproject\src\timer\timer.cpp
+	"Timer.h"
+	"GameFunction.h"
+
+1712600071 source:g:\gameproject\gameproject\src\vendor\tinyxml\tinystr.cpp
+	"tinystr.h"
+
+1712600071 source:g:\gameproject\gameproject\src\vendor\tinyxml\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1712600071 source:g:\gameproject\gameproject\src\vendor\tinyxml\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1712600071 source:g:\gameproject\gameproject\src\vendor\tinyxml\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1713535573 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+	"Warrior.h"
+	"BaseObject.h"
+
+1713535561 g:\gameproject\gameproject\src\characters\warrior.h
+	"SpellObject.h"
+	"GameFunction.h"
+	"BaseObject.h"
+	<vector>
+
+1711433332 g:\gameproject\gameproject\src\characters\character.h
+	"GameObject.h"
+	<string>
+
+1712732898 g:\gameproject\gameproject\src\object\gameobject.h
+	"IObject.h"
+	"Transform.h"
+	"SDL.h"
+	"Point.h"
+
+1712482484 g:\gameproject\gameproject\src\object\iobject.h
+
+1711433365 g:\gameproject\gameproject\src\physics\transform.h
+	"Vector2D.h"
+
+1711433351 g:\gameproject\gameproject\src\physics\vector2d.h
+	<iostream>
+
+1712826316 g:\gameproject\gameproject\src\physics\rigidbody.h
+	"Vector2D.h"
+
+1712931031 source:g:\gameproject\gameproject\src\core\engine.cpp
+	"Engine.h"
+	"TextureManager.h"
+	"Input.h"
+	"Warrior.h"
+	"SDL.h"
+	"Timer.h"
+	"MapParser.h"
+	<iostream>
+	"Camera.h"
+
+1712754821 g:\gameproject\gameproject\src\map\gamemap.h
+	"Layer.h"
+	<vector>
+
+1712720011 source:g:\gameproject\gameproject\src\camera\camera.cpp
+	"Camera.h"
+
+1712735794 g:\gameproject\gameproject\src\camera\camera.h
+	"SDL.h"
+	"Engine.h"
+	"Point.h"
+	"Vector2D.h"
+
+1712735713 g:\gameproject\gameproject\src\physics\point.h
+	<iostream>
+
+1712908266 g:\gameproject\gameproject\src\physics\collider.h
+	"SDL.h"
+
+1712939478 source:g:\gameproject\gameproject\src\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+	"iostream"
+
+1712908266 g:\gameproject\gameproject\src\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1712894816 source:g:\gameproject\gameproject\src\collision\collisionmanager.cpp
+	"CollisionManager.h"
+	"Engine.h"
+
+1712894816 g:\gameproject\gameproject\src\collision\collisionmanager.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+
+1712906681 g:\gameproject\gameproject\src\physics\collision.h
+	"SDL.h"
+
+1713535516 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+	"GameFunction.h"
+
+1713535505 g:\gameproject\gameproject\src\funcs\gamefunction.h
+	<windows.h>
+	<string>
+	<vector>
+	<SDL.h>
+	<SDL_image.h>
+
+1713535431 source:g:\gameproject\gameproject\src\object\baseobject.cpp
+	"BaseObject.h"
+
+1713535412 g:\gameproject\gameproject\src\object\baseobject.h
+	"GameFunction.h"
+
+1713535452 source:g:\gameproject\gameproject\src\map\gmemap.cpp
+	"GmeMap.h"
+	"stdio.h"
+	<iostream>
+
+1713535445 g:\gameproject\gameproject\src\map\gmemap.h
+	"GameFunction.h"
+	"BaseObject.h"
+
+1713535392 g:\gameproject\gameproject\src\spell\spellobject.h
+	"BaseObject.h"
+	"GameFunction.h"
+
+1713535401 source:g:\gameproject\gameproject\src\spell\spellobject.cpp
+	"SpellObject.h"
+
+1713535590 source:g:\gameproject\gameproject\src\characters\threatobjects.cpp
+	"ThreatObjects.h"
+
+1713535581 g:\gameproject\gameproject\src\characters\threatobjects.h
+	"GameFunction.h"
+	"BaseObject.h"
+	"SpellObject.h"
+
+1713535535 source:g:\gameproject\gameproject\src\effects\explosion.cpp
+	"Explosion.h"
+
+1713535525 g:\gameproject\gameproject\src\effects\explosion.h
+	"GameFunction.h"
+	"BaseObject.h"
+
+1713535382 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
+	"TextManager.h"
+
+1713535364 g:\gameproject\gameproject\src\textmanager\textmanager.h
+	"GameFunction.h"
+	"SDL_ttf.h"
+
+1705848875 c:\users\hirai\downloads\sdl2_ttf-devel-2.22.0-mingw (1)\sdl2_ttf-2.22.0\x86_64-w64-mingw32\include\sdl2\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+

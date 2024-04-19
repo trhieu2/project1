@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gameproject" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/gameproject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2-devel-2.30.1-mingw/SDL2-2.30.1/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_image-devel-2.8.2-mingw/SDL2_image-2.8.2/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="./" />
+					<Add directory="src/Funcs" />
+					<Add directory="src/Object" />
+					<Add directory="src/Map" />
+					<Add directory="src/Characters" />
+					<Add directory="src/Timer" />
+					<Add directory="src/Spell" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_ttf-devel-2.22.0-mingw (1)/SDL2_ttf-2.22.0/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_mixer-devel-2.8.0-mingw/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="src/Effects" />
+					<Add directory="src/TextManager" />
+				</Compiler>
+				<Linker>
+					<Add option="-lmingw32 -lSDL2main -lSDL2" />
+					<Add option="-lSDL2_image" />
+					<Add option="-lSDL2_ttf" />
+					<Add option="-lSDL2_mixer" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2-devel-2.30.1-mingw/SDL2-2.30.1/x86_64-w64-mingw32/lib" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_image-devel-2.8.2-mingw/SDL2_image-2.8.2/x86_64-w64-mingw32/lib" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_ttf-devel-2.22.0-mingw (1)/SDL2_ttf-2.22.0/x86_64-w64-mingw32/lib" />
+					<Add directory="C:/Users/hirai/Downloads/SDL2_mixer-devel-2.8.0-mingw/SDL2_mixer-2.8.0/x86_64-w64-mingw32/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/gameproject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="src/Core" />
+					<Add directory="src/Graphics" />
+					<Add directory="src/Physics" />
+					<Add directory="src/Object" />
+					<Add directory="./" />
+					<Add directory="src/Characters" />
+					<Add directory="src/Animation" />
+					<Add directory="src/Inputs" />
+					<Add directory="src/Timer" />
+					<Add directory="src/Map" />
+					<Add directory="src/Camera" />
+					<Add directory="src/Collision" />
+					<Add directory="G:/gameproject/gameproject/src/Physics" />
+					<Add directory="src/Funcs" />
+					<Add directory="src/Spell" />
+					<Add directory="src/Effects" />
+					<Add directory="src/TextManager" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/Users/hirai/Downloads/SDL2-devel-2.30.1-mingw/SDL2-2.30.1/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="C:/Users/hirai/Downloads/SDL2_image-devel-2.8.2-mingw/SDL2_image-2.8.2/x86_64-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2" />
+			<Add option="-lSDL2_image" />
+			<Add directory="C:/Users/hirai/Downloads/SDL2-devel-2.30.1-mingw/SDL2-2.30.1/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/Users/hirai/Downloads/SDL2_image-devel-2.8.2-mingw/SDL2_image-2.8.2/x86_64-w64-mingw32/lib" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Characters/ThreatObjects.cpp" />
+		<Unit filename="src/Characters/ThreatObjects.h" />
+		<Unit filename="src/Characters/Warrior.cpp" />
+		<Unit filename="src/Characters/Warrior.h" />
+		<Unit filename="src/Effects/Explosion.cpp" />
+		<Unit filename="src/Effects/Explosion.h" />
+		<Unit filename="src/Funcs/GameFunction.cpp" />
+		<Unit filename="src/Funcs/GameFunction.h" />
+		<Unit filename="src/Map/GmeMap.cpp" />
+		<Unit filename="src/Map/GmeMap.h" />
+		<Unit filename="src/Object/BaseObject.cpp" />
+		<Unit filename="src/Object/BaseObject.h" />
+		<Unit filename="src/Spell/SpellObject.cpp" />
+		<Unit filename="src/Spell/SpellObject.h" />
+		<Unit filename="src/TextManager/TextManager.cpp" />
+		<Unit filename="src/TextManager/TextManager.h" />
+		<Unit filename="src/Timer/Timer.cpp" />
+		<Unit filename="src/Timer/Timer.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
