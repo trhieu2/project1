@@ -1,10 +1,9 @@
 #ifndef TEXTMANAGER_H
 #define TEXTMANAGER_H
 
-#include "GameFunction.h"
-#include "SDL_ttf.h"
+#include "BaseObject.h"
 
-class TextManager
+class TextManager : public BaseObject
 {
     public:
         TextManager();

@@ -11,6 +11,8 @@
 #include "Money.h"
 
 BaseObject g_background;
+BaseObject g_start_screen;
+
 TTF_Font* font_time = NULL;
 bool Init()
 {

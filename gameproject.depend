@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713675713 source:g:\gameproject\gameproject\main.cpp
+1713784240 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	"GameFunction.h"
 	"BaseObject.h"
@@ -983,22 +983,22 @@
 1712906681 g:\gameproject\gameproject\src\physics\collision.h
 	"SDL.h"
 
-1713717643 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+1713784228 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
 	"GameFunction.h"
+	"TextManager.h"
 
-1713717643 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1713784228 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
-	"TextManager.h"
 
-1713717643 source:g:\gameproject\gameproject\src\object\baseobject.cpp
+1713784240 source:g:\gameproject\gameproject\src\object\baseobject.cpp
 	"BaseObject.h"
 
-1713717643 g:\gameproject\gameproject\src\object\baseobject.h
+1713784228 g:\gameproject\gameproject\src\object\baseobject.h
 	"GameFunction.h"
 
 1713675675 source:g:\gameproject\gameproject\src\map\gmemap.cpp
@@ -1033,12 +1033,11 @@
 	"GameFunction.h"
 	"BaseObject.h"
 
-1713535382 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
+1713784254 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
 	"TextManager.h"
 
-1713711807 g:\gameproject\gameproject\src\textmanager\textmanager.h
-	"GameFunction.h"
-	"SDL_ttf.h"
+1713784254 g:\gameproject\gameproject\src\textmanager\textmanager.h
+	"BaseObject.h"
 
 1705848875 c:\users\hirai\downloads\sdl2_ttf-devel-2.22.0-mingw (1)\sdl2_ttf-2.22.0\x86_64-w64-mingw32\include\sdl2\sdl_ttf.h
 	"SDL.h"
@@ -1058,4 +1057,11 @@
 
 1713594585 source:g:\gameproject\gameproject\src\playerproperties\money.cpp
 	"Money.h"
+
+1713775344 source:g:\gameproject\gameproject\src\menu\gamemenu.cpp
+	"GameMenu.h"
+
+1713779475 g:\gameproject\gameproject\src\menu\gamemenu.h
+	"BaseObject.h"
+	"GameFunction.h"
 
