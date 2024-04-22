@@ -43,6 +43,7 @@ class Warrior : public BaseObject
         void RemoveSpell(const int& indx);
         void IncreaseMoney();
         void set_comeback_time(const int& cbtime){come_back_time = cbtime;}
+        int GetMoneyCount() const {return money_count;}
     private:
         int money_count ;
         std::vector<SpellObject*> p_spell_list;
@@ -55,7 +56,7 @@ class Warrior : public BaseObject
         int width_frame;
         int height_frame;
 
-        SDL_Rect frame_clip_[8];
+        SDL_Rect frame_clip_[3];
         Input input_type;
         int frame;
         int status;

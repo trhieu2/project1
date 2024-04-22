@@ -28,12 +28,18 @@ class TextManager
 
         void SetText(const std::string& text){str_val = text;}
         std::string GetText() const {return str_val;}
-    private:
+
+        void SetRect(int x, int y) {x = xpos; y = ypos;}
+        void GetRect(){}
+
+        private:
         std::string str_val;
         SDL_Color text_color;
         SDL_Texture* texture;
         int width;
         int height;
+        int xpos;
+        int ypos;
 };
 
 #endif // TEXTMANAGER_H

@@ -37,7 +37,7 @@ void ThreatObjects::set_clips()
 {
     if(width_frame > 0 && height_frame > 0)
     {
-        for(int k = 0; k < 8; k++){
+        for(int k = 0; k < 3; k++){
         frame_clip_[k].x = width_frame*k;
         frame_clip_[k].y = 0;
         frame_clip_[k].w = width_frame;
@@ -64,7 +64,7 @@ void ThreatObjects::Show(SDL_Renderer* des)
         m_rect.x = x_pos - map_x;
         m_rect.y = y_pos - map_y;
         frame++;
-        if(frame >= 8)
+        if(frame >= 3)
         {
             frame = 0;
         }

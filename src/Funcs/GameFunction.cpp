@@ -9,7 +9,6 @@ GameFunction::~GameFunction()
 {
     //dtor
 }
-
 bool SDLCommonFunc::CheckCollision(const SDL_Rect& object1, const SDL_Rect& object2)
 {
   int left_a = object1.x;

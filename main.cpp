@@ -7,6 +7,8 @@
 #include "ThreatObjects.h"
 #include "Explosion.h"
 #include "TextManager.h"
+#include "PlayerProperties.h"
+#include "Money.h"
 
 BaseObject g_background;
 TTF_Font* font_time = NULL;
@@ -141,6 +143,13 @@ int main(int argc, char* argv[])
     p_player.LoadImg("assets/player_right.png", g_screen);
     p_player.set_clip();
 
+    PlayerProperties player_props;
+    player_props.Init(g_screen);
+
+    Money player_money;
+    player_money.Init(g_screen);
+    player_money.SetPos(SCREEN_WIDTH*0.5 - 300, 8);
+
     std::vector<ThreatObjects*> threats_list = CreateThreatObjects();
 
     Explosion exp_threat;
@@ -153,6 +162,14 @@ int main(int argc, char* argv[])
     //Time Text
     TextManager time_game;
     time_game.SetColor(TextManager::WHITE_TEXT);
+
+    TextManager mark_game;
+    mark_game.SetColor(TextManager::WHITE_TEXT);
+    UINT mark_value = 0;
+
+
+    TextManager money_game;
+    money_game.SetColor(TextManager::WHITE_TEXT);
 
     bool is_quit = false;
     while(!is_quit)
@@ -182,6 +199,9 @@ int main(int argc, char* argv[])
 
               game_map.SetMap(map_data);
               game_map.FillMap(g_screen);
+
+              player_props.Show(g_screen);
+              player_money.Show(g_screen);
 
               for(int i = 0; i < threats_list.size(); i++)
               {
@@ -216,12 +236,13 @@ int main(int argc, char* argv[])
                       bool bCol2 = SDLCommonFunc::CheckCollision(rect_player, rect_threat);
                       if(bCol1 || bCol2)
                       {
-                          if(num_die <= 1)
+                          if(num_die <= 3)
                           {
-                              num_die++;
                               p_player.SetRect(0,0);
                               p_player.set_comeback_time(60);
                               SDL_Delay(1000);
+                              player_props.Decrease();
+                              player_props.Render(g_screen);
                               continue;
                           }
                           else
@@ -264,6 +285,7 @@ int main(int argc, char* argv[])
 
                               if(bCol)
                               {
+                                  mark_value += 100;
                                   for(int ex = 0; ex < NUM_FRAME_EXP; ex++)
                                   {
                                       int x_pos = p_spell->GetRect().x; - frame_exp_width*0.5;
@@ -303,6 +325,21 @@ int main(int argc, char* argv[])
                 time_game.LoadFromRenderText(font_time, g_screen);
                 time_game.RenderTextt(g_screen, SCREEN_WIDTH - 200, 15);
               }
+
+              std::string val_str_mark = std::to_string(mark_value);
+              std::string strMark("Mark: ");
+              strMark += val_str_mark;
+
+              mark_game.SetText(strMark);
+              mark_game.LoadFromRenderText(font_time, g_screen);
+              mark_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 50, 15);
+
+              int money_count = p_player.GetMoneyCount();
+              std::string money_str = std::to_string(money_count);
+
+              money_game.SetText(money_str);
+              money_game .LoadFromRenderText(font_time, g_screen);
+              money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
 
               SDL_RenderPresent(g_screen);
 

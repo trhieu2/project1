@@ -5,7 +5,7 @@
 #include "BaseObject.h"
 #include "SpellObject.h"
 
-#define THREAT_FRAME_NUM 8
+#define THREAT_FRAME_NUM 3
 #define THREAT_GRAVITY_FALL 0.8
 #define MAX_FALL_SPEED 10
 #define THREAT_SPEED 3

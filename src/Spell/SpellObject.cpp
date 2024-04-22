@@ -31,10 +31,10 @@ void SpellObject::HandleMove(const int& x_border, const int& y_border)
     if(spell_direction == DIR_RIGHT)
     {
         m_rect.x += x_val;
+    }
     if(m_rect.x > x_border)
     {
         is_moving = false;
-    }
     }
     else if(spell_direction == DIR_LEFT)
     {

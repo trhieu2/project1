@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713536361 source:g:\gameproject\gameproject\main.cpp
+1713675713 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	"GameFunction.h"
 	"BaseObject.h"
@@ -9,6 +9,8 @@
 	"ThreatObjects.h"
 	"Explosion.h"
 	"TextManager.h"
+	"PlayerProperties.h"
+	"Money.h"
 
 1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -896,11 +898,11 @@
 	"tinyxml.h"
 	<windows.h>
 
-1713535573 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1713682060 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
 
-1713535561 g:\gameproject\gameproject\src\characters\warrior.h
+1713682060 g:\gameproject\gameproject\src\characters\warrior.h
 	"SpellObject.h"
 	"GameFunction.h"
 	"BaseObject.h"
@@ -981,42 +983,45 @@
 1712906681 g:\gameproject\gameproject\src\physics\collision.h
 	"SDL.h"
 
-1713535516 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+1713717643 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
 	"GameFunction.h"
 
-1713535505 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1713717643 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
 	<SDL.h>
 	<SDL_image.h>
+	<SDL_ttf.h>
+	"TextManager.h"
 
-1713535431 source:g:\gameproject\gameproject\src\object\baseobject.cpp
+1713717643 source:g:\gameproject\gameproject\src\object\baseobject.cpp
 	"BaseObject.h"
 
-1713535412 g:\gameproject\gameproject\src\object\baseobject.h
+1713717643 g:\gameproject\gameproject\src\object\baseobject.h
 	"GameFunction.h"
 
-1713535452 source:g:\gameproject\gameproject\src\map\gmemap.cpp
+1713675675 source:g:\gameproject\gameproject\src\map\gmemap.cpp
 	"GmeMap.h"
-	"stdio.h"
+	<stdio.h>
+	<stdlib.h>
 	<iostream>
 
-1713535445 g:\gameproject\gameproject\src\map\gmemap.h
+1713675667 g:\gameproject\gameproject\src\map\gmemap.h
 	"GameFunction.h"
 	"BaseObject.h"
 
-1713535392 g:\gameproject\gameproject\src\spell\spellobject.h
+1713688811 g:\gameproject\gameproject\src\spell\spellobject.h
 	"BaseObject.h"
 	"GameFunction.h"
 
-1713535401 source:g:\gameproject\gameproject\src\spell\spellobject.cpp
+1713707038 source:g:\gameproject\gameproject\src\spell\spellobject.cpp
 	"SpellObject.h"
 
-1713535590 source:g:\gameproject\gameproject\src\characters\threatobjects.cpp
+1713681648 source:g:\gameproject\gameproject\src\characters\threatobjects.cpp
 	"ThreatObjects.h"
 
-1713535581 g:\gameproject\gameproject\src\characters\threatobjects.h
+1713681648 g:\gameproject\gameproject\src\characters\threatobjects.h
 	"GameFunction.h"
 	"BaseObject.h"
 	"SpellObject.h"
@@ -1024,14 +1029,14 @@
 1713535535 source:g:\gameproject\gameproject\src\effects\explosion.cpp
 	"Explosion.h"
 
-1713535525 g:\gameproject\gameproject\src\effects\explosion.h
+1713689605 g:\gameproject\gameproject\src\effects\explosion.h
 	"GameFunction.h"
 	"BaseObject.h"
 
 1713535382 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
 	"TextManager.h"
 
-1713535364 g:\gameproject\gameproject\src\textmanager\textmanager.h
+1713711807 g:\gameproject\gameproject\src\textmanager\textmanager.h
 	"GameFunction.h"
 	"SDL_ttf.h"
 
@@ -1039,4 +1044,18 @@
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
+
+1713593528 source:g:\gameproject\gameproject\src\playerproperties\playerproperties.cpp
+	"PlayerProperties.h"
+
+1713594152 g:\gameproject\gameproject\src\playerproperties\playerproperties.h
+	"GameFunction.h"
+	"BaseObject.h"
+
+1713594170 g:\gameproject\gameproject\src\playerproperties\money.h
+	"GameFunction.h"
+	"BaseObject.h"
+
+1713594585 source:g:\gameproject\gameproject\src\playerproperties\money.cpp
+	"Money.h"
 

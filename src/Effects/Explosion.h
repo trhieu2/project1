@@ -4,7 +4,7 @@
 #include "GameFunction.h"
 #include "BaseObject.h"
 
-#define NUM_FRAME_EXP 8
+#define NUM_FRAME_EXP 4
 
 class Explosion : public BaseObject
 {

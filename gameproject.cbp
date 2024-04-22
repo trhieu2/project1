@@ -26,6 +26,8 @@
 					<Add directory="C:/Users/hirai/Downloads/SDL2_mixer-devel-2.8.0-mingw/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2" />
 					<Add directory="src/Effects" />
 					<Add directory="src/TextManager" />
+					<Add directory="src/PlayerProperties" />
+					<Add directory="src/Menu" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main -lSDL2" />
@@ -62,6 +64,8 @@
 					<Add directory="src/Spell" />
 					<Add directory="src/Effects" />
 					<Add directory="src/TextManager" />
+					<Add directory="src/PlayerProperties" />
+					<Add directory="src/Menu" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -92,6 +96,10 @@
 		<Unit filename="src/Map/GmeMap.h" />
 		<Unit filename="src/Object/BaseObject.cpp" />
 		<Unit filename="src/Object/BaseObject.h" />
+		<Unit filename="src/PlayerProperties/Money.cpp" />
+		<Unit filename="src/PlayerProperties/Money.h" />
+		<Unit filename="src/PlayerProperties/PlayerProperties.cpp" />
+		<Unit filename="src/PlayerProperties/PlayerProperties.h" />
 		<Unit filename="src/Spell/SpellObject.cpp" />
 		<Unit filename="src/Spell/SpellObject.h" />
 		<Unit filename="src/TextManager/TextManager.cpp" />

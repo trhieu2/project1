@@ -1,5 +1,6 @@
 #include "GmeMap.h"
-#include "stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 void GmeMap::LoadTiles(SDL_Renderer* screen)
 {
