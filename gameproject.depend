@@ -1,11 +1,6 @@
 # depslib dependency file v1.0
-1713840649 source:g:\gameproject\gameproject\main.cpp
+1713840763 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
-	<SDL.h>
-	<SDL_image.h>
-	<SDL_ttf.h>
-	<string>
-	<vector>
 	"GameFunction.h"
 	"BaseObject.h"
 	"GmeMap.h"
