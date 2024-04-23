@@ -14,6 +14,7 @@ BaseObject g_background;
 BaseObject g_start_screen;
 
 TTF_Font* font_time = NULL;
+
 bool Init()
 {
     bool success = true;
@@ -370,3 +371,4 @@ int main(int argc, char* argv[])
     Close();
     return 0;
 }
+

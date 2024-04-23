@@ -1,6 +1,11 @@
 # depslib dependency file v1.0
-1713784240 source:g:\gameproject\gameproject\main.cpp
+1713840649 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<string>
+	<vector>
 	"GameFunction.h"
 	"BaseObject.h"
 	"GmeMap.h"
@@ -987,7 +992,7 @@
 	"GameFunction.h"
 	"TextManager.h"
 
-1713784228 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1713837961 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
@@ -1033,10 +1038,10 @@
 	"GameFunction.h"
 	"BaseObject.h"
 
-1713784254 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
+1713835934 source:g:\gameproject\gameproject\src\textmanager\textmanager.cpp
 	"TextManager.h"
 
-1713784254 g:\gameproject\gameproject\src\textmanager\textmanager.h
+1713835934 g:\gameproject\gameproject\src\textmanager\textmanager.h
 	"BaseObject.h"
 
 1705848875 c:\users\hirai\downloads\sdl2_ttf-devel-2.22.0-mingw (1)\sdl2_ttf-2.22.0\x86_64-w64-mingw32\include\sdl2\sdl_ttf.h
