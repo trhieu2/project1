@@ -168,6 +168,23 @@ int main(int argc, char* argv[])
 
     int num_die = 0;
 
+    TextManager title;
+    title.SetText("MISSION CAT");
+    title.SetColor(TextManager::BLACK_TEXT);
+    title.LoadFromRenderText(font_time, g_screen);
+
+    //Story line Text
+    TextManager storyline;
+    storyline.SetText("STORY LINE: In this world, you are a little yellow cat who is on his way fight against evil entities to protect his world");
+    storyline.SetColor(TextManager::BLACK_TEXT);
+    storyline.LoadFromRenderText(font_time, g_screen);
+
+    //Instruction Text
+    TextManager instruction_text;
+    instruction_text.SetText("Here are some instructions for you warrior: .\nPress Enter to start the game .\nPress Space to pause the game .\nPress Space again to resume");
+    instruction_text.SetColor(TextManager::BLACK_TEXT);
+    instruction_text.LoadFromRenderText(font_time, g_screen);
+
     //Time Text
     TextManager time_game;
     time_game.SetColor(TextManager::WHITE_TEXT);
@@ -190,12 +207,13 @@ int main(int argc, char* argv[])
     int textX = (SCREEN_WIDTH - textWidth) / 2;
     int textY = (SCREEN_HEIGHT - textHeight) / 2;
 
-    click_text.RenderTextt(g_screen, textX, textY);
-    SDL_RenderPresent(g_screen);
-
     bool start_game = false;
     while (!start_game) {
         background.Render(g_screen, NULL);
+
+        title.RenderTextt(g_screen, (SCREEN_WIDTH - title.GetWidth()) / 2, 50); // Adjust Y position to 50
+storyline.RenderTextt(g_screen, (SCREEN_WIDTH - storyline.GetWidth()) / 2, 150); // Adjust Y position to 150
+instruction_text.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text.GetWidth()) / 2, 250); // Adjust Y position to 250
 
         click_text.RenderTextt(g_screen, textX, textY);
         SDL_RenderPresent(g_screen);
