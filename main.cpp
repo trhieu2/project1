@@ -138,6 +138,12 @@ int main(int argc, char* argv[])
     if(LoadBackGround() == false)
         return -1;
 
+    BaseObject background;
+    if (background.LoadImg("assets/start_screen.png", g_screen) == false)
+        return -1;
+
+    TTF_Font* font = TTF_OpenFont("font/dlxfont_.ttf", 24);
+
     GmeMap game_map;
     game_map.LoadMap("map/map01.dat");
     game_map.LoadTiles(g_screen);
@@ -170,9 +176,40 @@ int main(int argc, char* argv[])
     mark_game.SetColor(TextManager::WHITE_TEXT);
     UINT mark_value = 0;
 
-
     TextManager money_game;
     money_game.SetColor(TextManager::WHITE_TEXT);
+
+    TextManager click_text;
+    click_text.SetText("Press Enter to Play");
+    click_text.SetColor(TextManager::WHITE_TEXT);
+    click_text.LoadFromRenderText(font, g_screen);
+
+    int textWidth = click_text.GetWidth();
+    int textHeight = click_text.GetHeight();
+    int textX = (SCREEN_WIDTH - textWidth) / 2;
+    int textY = (SCREEN_HEIGHT - textHeight) / 2;
+
+    click_text.RenderTextt(g_screen, textX, textY);
+    SDL_RenderPresent(g_screen);
+
+    bool start_game = false;
+    while (!start_game) {
+        background.Render(g_screen, NULL);
+
+        click_text.RenderTextt(g_screen, textX, textY);
+        SDL_RenderPresent(g_screen);
+
+        while (SDL_PollEvent(&g_event) != 0) {
+            if (g_event.type == SDL_QUIT) {
+                start_game = true;
+            }
+            else if (g_event.type == SDL_KEYDOWN && g_event.key.keysym.sym == SDLK_RETURN) {
+                start_game = true;
+            }
+        }
+    }
+
+    SDL_RenderClear(g_screen);
 
     bool is_quit = false;
     while(!is_quit)
@@ -341,7 +378,7 @@ int main(int argc, char* argv[])
               std::string money_str = std::to_string(money_count);
 
               money_game.SetText(money_str);
-              money_game .LoadFromRenderText(font_time, g_screen);
+              money_game.LoadFromRenderText(font_time, g_screen);
               money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
 
               SDL_RenderPresent(g_screen);

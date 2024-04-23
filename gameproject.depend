@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713879006 source:g:\gameproject\gameproject\main.cpp
+1713890622 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	"GameFunction.h"
 	"BaseObject.h"
@@ -987,7 +987,7 @@
 	"GameFunction.h"
 	"TextManager.h"
 
-1713837961 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1713884702 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
@@ -1071,4 +1071,19 @@
 
 1713877205 g:\gameproject\gameproject\src\gamestate\gamestate.h
 	"GameFunction.h"
+
+1713879470 source:g:\gameproject\gameproject\src\buttons\button.cpp
+	"Button.h"
+
+1713879469 g:\gameproject\gameproject\src\buttons\button.h
+	"BaseObject.h"
+	"TextManager.h"
+
+1713882137 source:g:\gameproject\gameproject\src\states\menu.cpp
+	"Menu.h"
+
+1713882126 g:\gameproject\gameproject\src\states\menu.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
 
