@@ -179,6 +179,7 @@ int main(int argc, char* argv[])
     TextManager money_game;
     money_game.SetColor(TextManager::WHITE_TEXT);
 
+    //Start Screen Text
     TextManager click_text;
     click_text.SetText("Press Enter to Play");
     click_text.SetColor(TextManager::BLACK_TEXT);
@@ -211,7 +212,15 @@ int main(int argc, char* argv[])
 
     SDL_RenderClear(g_screen);
 
+    //Resume Text
+    TextManager resume_text;
+    resume_text.SetText("Press space to resume");
+    resume_text.SetColor(TextManager::BLACK_TEXT);
+    resume_text.LoadFromRenderText(font, g_screen);
+
     bool is_quit = false;
+    bool is_paused = false;
+
     while(!is_quit)
     {
         fps_timer.start();
@@ -221,8 +230,30 @@ int main(int argc, char* argv[])
                 {
                     is_quit = true;
                 }
-
+                else if(g_event.type == SDL_KEYDOWN)
+                {
+                    if(g_event.key.keysym.sym == SDLK_SPACE)
+                    {
+                        is_paused = !is_paused;
+                        if(!is_paused)
+                        {
+                            SDL_RenderClear(g_screen);
+                        }
+                    }
+                }
                 p_player.HandleInput(g_event, g_screen);
+              }
+              if (is_paused)
+              {
+                    int textWidth = resume_text.GetWidth();
+                    int textHeight = resume_text.GetHeight();
+                    int textX = (SCREEN_WIDTH - textWidth) / 2;
+                    int textY = (SCREEN_HEIGHT - textHeight) / 2;
+
+                    resume_text.RenderTextt(g_screen, textX, textY);
+                    SDL_RenderPresent(g_screen);
+
+                    continue;
               }
               SDL_SetRenderDrawColor(g_screen, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR);
               SDL_RenderClear(g_screen);
