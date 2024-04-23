@@ -367,6 +367,7 @@ int main(int argc, char* argv[])
             p_threat = NULL;
         }
     }
+
     threats_list.clear();
     Close();
     return 0;

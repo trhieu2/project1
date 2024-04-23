@@ -94,8 +94,6 @@
 		<Unit filename="src/Effects/Explosion.h" />
 		<Unit filename="src/Funcs/GameFunction.cpp" />
 		<Unit filename="src/Funcs/GameFunction.h" />
-		<Unit filename="src/GameState/GameState.cpp" />
-		<Unit filename="src/GameState/GameState.h" />
 		<Unit filename="src/Map/GmeMap.cpp" />
 		<Unit filename="src/Map/GmeMap.h" />
 		<Unit filename="src/Object/BaseObject.cpp" />
