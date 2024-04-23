@@ -181,7 +181,7 @@ int main(int argc, char* argv[])
 
     TextManager click_text;
     click_text.SetText("Press Enter to Play");
-    click_text.SetColor(TextManager::WHITE_TEXT);
+    click_text.SetColor(TextManager::BLACK_TEXT);
     click_text.LoadFromRenderText(font, g_screen);
 
     int textWidth = click_text.GetWidth();
