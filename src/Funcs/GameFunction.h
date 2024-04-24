@@ -24,9 +24,6 @@ const int COLOR_KEY_B = 180;
 
 const int RENDER_DRAW_COLOR = 0Xff;
 
-const int buttonWidth = 200;
-const int buttonHeight = 50;
-
 #define TILE_SIZE 64
 
 #define MAX_X 400

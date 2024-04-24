@@ -9,7 +9,7 @@
 #define GRAVITY 0.8
 #define MAX_GRAVITY 9.8
 #define WARRIOR_SPEED 6
-#define WARRIOR_JUMPFORCE 15
+#define WARRIOR_JUMPFORCE 20
 
 class Warrior : public BaseObject
 {

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713928913 source:g:\gameproject\gameproject\main.cpp
+1713968427 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	"GameFunction.h"
 	"BaseObject.h"
@@ -11,6 +11,7 @@
 	"TextManager.h"
 	"PlayerProperties.h"
 	"Money.h"
+	"SDL_mixer.h"
 
 1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -898,11 +899,11 @@
 	"tinyxml.h"
 	<windows.h>
 
-1713682060 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1713933014 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
 
-1713682060 g:\gameproject\gameproject\src\characters\warrior.h
+1713936626 g:\gameproject\gameproject\src\characters\warrior.h
 	"SpellObject.h"
 	"GameFunction.h"
 	"BaseObject.h"
@@ -983,12 +984,12 @@
 1712906681 g:\gameproject\gameproject\src\physics\collision.h
 	"SDL.h"
 
-1713930713 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+1713932132 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
 	"GameFunction.h"
 	"TextManager.h"
 	<math.h>
 
-1713884702 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1713931906 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
@@ -1087,4 +1088,13 @@
 	<SDL.h>
 	<SDL_ttf.h>
 	<string>
+
+1705857752 c:\users\hirai\downloads\sdl2_mixer-devel-2.8.0-mingw\sdl2_mixer-2.8.0\x86_64-w64-mingw32\include\sdl2\sdl_mixer.h
+	"SDL_stdinc.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
 

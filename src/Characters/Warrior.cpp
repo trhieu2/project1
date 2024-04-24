@@ -309,7 +309,7 @@ void Warrior::CheckToMap(Map& map_data)
 
     if(x1 >= 0 && x2 < MAX_X && y1 >= 0 && y2 < MAX_Y)
     {
-        if(x_val > 0) //moing right
+        if(x_val > 0) //moving right
         {
             int val1 = map_data.tile[y1][x2];
             int val2 = map_data.tile[y2][x2];
@@ -425,7 +425,7 @@ void Warrior::CheckToMap(Map& map_data)
 
 void Warrior::IncreaseMoney()
 {
-    money_count++;
+    money_count += 1000;
 }
 
 void Warrior::UpdateImngWarrior(SDL_Renderer* des)

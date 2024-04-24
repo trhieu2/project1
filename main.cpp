@@ -9,6 +9,7 @@
 #include "TextManager.h"
 #include "PlayerProperties.h"
 #include "Money.h"
+#include "SDL_mixer.h"
 
 BaseObject g_background;
 BaseObject g_start_screen;
@@ -51,6 +52,10 @@ bool Init()
         {
             success = false;
 
+        }
+        if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+        {
+            success = false;
         }
     }
     return success;
@@ -235,14 +240,31 @@ int main(int argc, char* argv[])
     resume_text.SetColor(TextManager::BLACK_TEXT);
     resume_text.LoadFromRenderText(font, g_screen);
 
+    SDL_Init(SDL_INIT_AUDIO);
+    if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+        printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
+    }
+
+    Mix_Music *startScreenMusic = Mix_LoadMUS("music/hurry_up_and_run.mp3");
+    Mix_Music *inGameMusic = Mix_LoadMUS("music/dark-happy-world.mp3");
+
+    if(startScreenMusic == NULL || inGameMusic == NULL) {
+        printf("Failed to load music! SDL_mixer Error: %s\n", Mix_GetError());
+    }
+
     bool start_game = false;
     while (!start_game) {
         background.Render(g_screen, NULL);
 
-        title.RenderTextt(g_screen, (SCREEN_WIDTH - title.GetWidth()) / 2, 50); // Adjust Y position to 50
-        storyline1.RenderTextt(g_screen, (SCREEN_WIDTH - storyline1.GetWidth()) / 2, 100); // Adjust Y position to 150
+        if(!Mix_PlayingMusic())
+        {
+            Mix_PlayMusic(startScreenMusic, -1);
+        }
+
+        title.RenderTextt(g_screen, (SCREEN_WIDTH - title.GetWidth()) / 2, 50);
+        storyline1.RenderTextt(g_screen, (SCREEN_WIDTH - storyline1.GetWidth()) / 2, 100);
         storyline2.RenderTextt(g_screen, (SCREEN_WIDTH - storyline2.GetWidth()) / 2, 150);
-        instruction_text1.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text1.GetWidth()) / 2, 200); // Adjust Y position to 250
+        instruction_text1.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text1.GetWidth()) / 2, 200);
         instruction_text2.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text2.GetWidth()) / 2, 250);
         instruction_text3.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text3.GetWidth()) / 2, 300);
         instruction_text4.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text4.GetWidth()) / 2, 350);
@@ -260,10 +282,19 @@ int main(int argc, char* argv[])
         }
     }
 
+    Mix_HaltMusic();
+
     SDL_RenderClear(g_screen);
 
     bool is_quit = false;
     bool is_paused = false;
+    bool ingamemusic_playing = false;
+
+    if(!Mix_PlayingMusic())
+    {
+        Mix_PlayMusic(inGameMusic,-1);
+        ingamemusic_playing = true;
+    }
 
     while(!is_quit)
     {
@@ -279,9 +310,19 @@ int main(int argc, char* argv[])
                     if(g_event.key.keysym.sym == SDLK_SPACE)
                     {
                         is_paused = !is_paused;
-                        if(!is_paused)
+                        if(is_paused)
                         {
-                            SDL_RenderClear(g_screen);
+                            if(Mix_PlayingMusic() != 0)
+                            {
+                            Mix_HaltMusic();
+                            }
+                        }
+                        else
+                        {
+                            if(Mix_PlayingMusic() == 0)
+                            {
+                            Mix_PlayMusic(inGameMusic, -1);
+                            }
                         }
                     }
                 }
@@ -296,8 +337,8 @@ int main(int argc, char* argv[])
 
                     resume_text.RenderTextt(g_screen, textX, textY);
                     SDL_RenderPresent(g_screen);
-
                     continue;
+
               }
               SDL_SetRenderDrawColor(g_screen, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR);
               SDL_RenderClear(g_screen);
@@ -349,25 +390,24 @@ int main(int argc, char* argv[])
 
                       SDL_Rect rect_threat = p_threat->GetRectFrame();
                       bool bCol2 = SDLCommonFunc::CheckCollision(rect_player, rect_threat);
-                      if(bCol1 || bCol2)
+                      if(bCol2 || bCol1)
                       {
+                          num_die++;
                           if(num_die <= 3)
                           {
                               p_player.SetRect(0,0);
-                              p_player.set_comeback_time(60);
-                              SDL_Delay(1000);
+                              p_player.set_comeback_time(20);
+                              SDL_Delay(500);
                               player_props.Decrease();
                               player_props.Render(g_screen);
                               continue;
                           }
-                          else
+                          else if(num_die > 3)
                           {
                               if(MessageBox(NULL, "GAME OVER", "Info", MB_OK | MB_ICONSTOP) == IDOK)
                           {
-                              p_threat->Free();
-                              Close();
-                              SDL_Quit();
-                              return 0;
+                              is_quit = true;
+                              break;
                           }
                           }
                       }
