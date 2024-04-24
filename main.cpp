@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "GameFunction.h"
 #include "BaseObject.h"
 #include "GmeMap.h"
@@ -15,6 +16,17 @@ BaseObject g_background;
 BaseObject g_start_screen;
 
 TTF_Font* font_time = NULL;
+
+int high_score = 0;
+
+void RenderHighScore(TextManager& text_manager, SDL_Renderer* renderer, TTF_Font* font)
+{
+    std::string score_text = "High Score: " + std::to_string(high_score);
+    text_manager.SetText(score_text);
+    text_manager.SetColor(TextManager::WHITE_TEXT);
+    text_manager.LoadFromRenderText(font, renderer);
+    text_manager.RenderTextt(renderer, SCREEN_WIDTH - 200, 50);
+}
 
 bool Init()
 {
@@ -47,7 +59,7 @@ bool Init()
         {
             success = false;
         }
-        font_time = TTF_OpenFont("font/dlxfont_.ttf", 15);
+        font_time = TTF_OpenFont("font/dlxfont_.ttf", 12);
         if(font_time == NULL)
         {
             success = false;
@@ -289,6 +301,7 @@ int main(int argc, char* argv[])
     bool is_quit = false;
     bool is_paused = false;
     bool ingamemusic_playing = false;
+    bool is_restart = false;
 
     if(!Mix_PlayingMusic())
     {
@@ -404,15 +417,24 @@ int main(int argc, char* argv[])
                           }
                           else if(num_die > 3)
                           {
-                              if(MessageBox(NULL, "GAME OVER", "Info", MB_OK | MB_ICONSTOP) == IDOK)
-                          {
-                              is_quit = true;
-                              break;
-                          }
+                          if(MessageBox(NULL, "PLAY AGAIN ?", "Info", MB_OKCANCEL | MB_ICONSTOP) == IDCANCEL)
+                        {
+                            is_quit = true;
+                        }
+                        else
+                        {
+                            num_die = 0;
+                            is_restart = true;
+                        }
                           }
                       }
-
                   }
+              }
+              if(is_restart)
+              {
+                  p_player.Reset();
+                  is_restart = false;
+                  num_die = 3;
               }
               int frame_exp_width = exp_threat.get_frame_width();
               int frame_exp_height = exp_threat.get_frame_height();
@@ -489,6 +511,12 @@ int main(int argc, char* argv[])
               mark_game.LoadFromRenderText(font_time, g_screen);
               mark_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 50, 15);
 
+              if(mark_value > high_score)
+              {
+                  high_score = mark_value;
+              }
+              RenderHighScore(mark_game, g_screen, font_time);
+
               int money_count = p_player.GetMoneyCount();
               std::string money_str = std::to_string(money_count);
 
@@ -524,4 +552,3 @@ int main(int argc, char* argv[])
     Close();
     return 0;
 }
-

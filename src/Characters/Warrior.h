@@ -44,6 +44,11 @@ class Warrior : public BaseObject
         void IncreaseMoney();
         void set_comeback_time(const int& cbtime){come_back_time = cbtime;}
         int GetMoneyCount() const {return money_count;}
+        void Reset()
+        {
+            x_pos = 0;
+            money_count = 0;
+        }
     private:
         int money_count ;
         std::vector<SpellObject*> p_spell_list;

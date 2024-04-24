@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1713968427 source:g:\gameproject\gameproject\main.cpp
+1713981117 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
+	<string>
 	"GameFunction.h"
 	"BaseObject.h"
 	"GmeMap.h"
@@ -903,7 +904,7 @@
 	"Warrior.h"
 	"BaseObject.h"
 
-1713936626 g:\gameproject\gameproject\src\characters\warrior.h
+1713978765 g:\gameproject\gameproject\src\characters\warrior.h
 	"SpellObject.h"
 	"GameFunction.h"
 	"BaseObject.h"
@@ -1097,4 +1098,10 @@
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
+
+1713972877 source:g:\gameproject\gameproject\src\button\button.cpp
+	"Button.h"
+
+1713973675 g:\gameproject\gameproject\src\button\button.h
+	<SDL.h>
 
