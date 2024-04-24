@@ -144,6 +144,8 @@ int main(int argc, char* argv[])
 
     TTF_Font* font = TTF_OpenFont("font/dlxfont_.ttf", 24);
 
+    TTF_Font* title_font = TTF_OpenFont("font/kaph.ttf", 30);
+
     //Loading map
     GmeMap game_map;
     game_map.LoadMap("map/map01.dat");
@@ -175,7 +177,7 @@ int main(int argc, char* argv[])
     TextManager title;
     title.SetText("MISSION CAT");
     title.SetColor(TextManager::BLACK_TEXT);
-    title.LoadFromRenderText(font_time, g_screen);
+    title.LoadFromRenderText(title_font, g_screen);
 
     //Story line Text
     TextManager storyline1;
