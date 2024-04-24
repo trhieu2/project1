@@ -144,10 +144,12 @@ int main(int argc, char* argv[])
 
     TTF_Font* font = TTF_OpenFont("font/dlxfont_.ttf", 24);
 
+    //Loading map
     GmeMap game_map;
     game_map.LoadMap("map/map01.dat");
     game_map.LoadTiles(g_screen);
 
+    //Loading Player
     Warrior p_player;
     p_player.LoadImg("assets/player_right.png", g_screen);
     p_player.set_clip();
@@ -155,6 +157,7 @@ int main(int argc, char* argv[])
     PlayerProperties player_props;
     player_props.Init(g_screen);
 
+    //Loading money
     Money player_money;
     player_money.Init(g_screen);
     player_money.SetPos(SCREEN_WIDTH*0.5 - 300, 8);
@@ -168,22 +171,44 @@ int main(int argc, char* argv[])
 
     int num_die = 0;
 
+    //Game Tile Text
     TextManager title;
     title.SetText("MISSION CAT");
     title.SetColor(TextManager::BLACK_TEXT);
     title.LoadFromRenderText(font_time, g_screen);
 
     //Story line Text
-    TextManager storyline;
-    storyline.SetText("STORY LINE: In this world, you are a little yellow cat who is on his way fight against evil entities to protect his world");
-    storyline.SetColor(TextManager::BLACK_TEXT);
-    storyline.LoadFromRenderText(font_time, g_screen);
+    TextManager storyline1;
+    storyline1.SetText("STORY LINE: In this world, you are a little yellow cat who is");
+    storyline1.SetColor(TextManager::BLACK_TEXT);
+    storyline1.LoadFromRenderText(font_time, g_screen);
+
+    TextManager storyline2;
+    storyline2.SetText("on his way to fight against evil entities to protect his world");
+    storyline2.SetColor(TextManager::BLACK_TEXT);
+    storyline2.LoadFromRenderText(font_time, g_screen);
 
     //Instruction Text
-    TextManager instruction_text;
-    instruction_text.SetText("Here are some instructions for you warrior: .\nPress Enter to start the game .\nPress Space to pause the game .\nPress Space again to resume");
-    instruction_text.SetColor(TextManager::BLACK_TEXT);
-    instruction_text.LoadFromRenderText(font_time, g_screen);
+    TextManager instruction_text1;
+    instruction_text1.SetText("Here are some instructions for you warrior:");
+    instruction_text1.SetColor(TextManager::BLACK_TEXT);
+    instruction_text1.LoadFromRenderText(font_time, g_screen);
+
+    TextManager instruction_text2;
+    instruction_text2.SetText("Press Enter to start the game");
+    instruction_text2.SetColor(TextManager::BLACK_TEXT);
+    instruction_text2.LoadFromRenderText(font_time, g_screen);
+
+    TextManager instruction_text3;
+    instruction_text3.SetText("Press Space to pause the game");
+    instruction_text3.SetColor(TextManager::BLACK_TEXT);
+    instruction_text3.LoadFromRenderText(font_time, g_screen);
+
+    TextManager instruction_text4;
+    instruction_text4.SetText("Press Space again to resume");
+    instruction_text4.SetColor(TextManager::BLACK_TEXT);
+    instruction_text4.LoadFromRenderText(font_time, g_screen);
+
 
     //Time Text
     TextManager time_game;
@@ -202,20 +227,25 @@ int main(int argc, char* argv[])
     click_text.SetColor(TextManager::BLACK_TEXT);
     click_text.LoadFromRenderText(font, g_screen);
 
-    int textWidth = click_text.GetWidth();
-    int textHeight = click_text.GetHeight();
-    int textX = (SCREEN_WIDTH - textWidth) / 2;
-    int textY = (SCREEN_HEIGHT - textHeight) / 2;
+     //Resume Text
+    TextManager resume_text;
+    resume_text.SetText("Press space to resume");
+    resume_text.SetColor(TextManager::BLACK_TEXT);
+    resume_text.LoadFromRenderText(font, g_screen);
 
     bool start_game = false;
     while (!start_game) {
         background.Render(g_screen, NULL);
 
         title.RenderTextt(g_screen, (SCREEN_WIDTH - title.GetWidth()) / 2, 50); // Adjust Y position to 50
-storyline.RenderTextt(g_screen, (SCREEN_WIDTH - storyline.GetWidth()) / 2, 150); // Adjust Y position to 150
-instruction_text.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text.GetWidth()) / 2, 250); // Adjust Y position to 250
+        storyline1.RenderTextt(g_screen, (SCREEN_WIDTH - storyline1.GetWidth()) / 2, 100); // Adjust Y position to 150
+        storyline2.RenderTextt(g_screen, (SCREEN_WIDTH - storyline2.GetWidth()) / 2, 150);
+        instruction_text1.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text1.GetWidth()) / 2, 200); // Adjust Y position to 250
+        instruction_text2.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text2.GetWidth()) / 2, 250);
+        instruction_text3.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text3.GetWidth()) / 2, 300);
+        instruction_text4.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text4.GetWidth()) / 2, 350);
 
-        click_text.RenderTextt(g_screen, textX, textY);
+        click_text.RenderTextt(g_screen, (SCREEN_WIDTH - click_text.GetWidth())/2, 420);
         SDL_RenderPresent(g_screen);
 
         while (SDL_PollEvent(&g_event) != 0) {
@@ -229,12 +259,6 @@ instruction_text.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text.GetWidth
     }
 
     SDL_RenderClear(g_screen);
-
-    //Resume Text
-    TextManager resume_text;
-    resume_text.SetText("Press space to resume");
-    resume_text.SetColor(TextManager::BLACK_TEXT);
-    resume_text.LoadFromRenderText(font, g_screen);
 
     bool is_quit = false;
     bool is_paused = false;

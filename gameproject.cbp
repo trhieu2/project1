@@ -29,6 +29,8 @@
 					<Add directory="src/PlayerProperties" />
 					<Add directory="src/Menu" />
 					<Add directory="src/GameState" />
+					<Add directory="src/Buttons" />
+					<Add directory="src/States" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main -lSDL2" />
@@ -68,6 +70,8 @@
 					<Add directory="src/PlayerProperties" />
 					<Add directory="src/Menu" />
 					<Add directory="src/GameState" />
+					<Add directory="src/Buttons" />
+					<Add directory="src/States" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
