@@ -408,7 +408,6 @@ int main(int argc, char* argv[])
                       bool bCol2 = SDLCommonFunc::CheckCollision(rect_player, rect_threat);
                       if(bCol2 || bCol1)
                       {
-
                           num_die++;
                           if(num_die <= 3)
                           {
