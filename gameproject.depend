@@ -983,9 +983,10 @@
 1712906681 g:\gameproject\gameproject\src\physics\collision.h
 	"SDL.h"
 
-1713784228 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+1713930713 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
 	"GameFunction.h"
 	"TextManager.h"
+	<math.h>
 
 1713884702 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
