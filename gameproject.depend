@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713928192 source:g:\gameproject\gameproject\main.cpp
+1713928913 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	"GameFunction.h"
 	"BaseObject.h"

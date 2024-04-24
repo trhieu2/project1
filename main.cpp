@@ -142,9 +142,9 @@ int main(int argc, char* argv[])
     if (background.LoadImg("assets/start_screen.png", g_screen) == false)
         return -1;
 
-    TTF_Font* font = TTF_OpenFont("font/dlxfont_.ttf", 24);
+    TTF_Font* font = TTF_OpenFont("font/kaph.ttf", 20);
 
-    TTF_Font* title_font = TTF_OpenFont("font/kaph.ttf", 30);
+    TTF_Font* title_font = TTF_OpenFont("font/kaph.ttf", 35);
 
     //Loading map
     GmeMap game_map;
@@ -176,40 +176,40 @@ int main(int argc, char* argv[])
     //Game Tile Text
     TextManager title;
     title.SetText("MISSION CAT");
-    title.SetColor(TextManager::BLACK_TEXT);
+    title.SetColor(TextManager::RED_TEXT);
     title.LoadFromRenderText(title_font, g_screen);
 
     //Story line Text
     TextManager storyline1;
     storyline1.SetText("STORY LINE: In this world, you are a little yellow cat who is");
     storyline1.SetColor(TextManager::BLACK_TEXT);
-    storyline1.LoadFromRenderText(font_time, g_screen);
+    storyline1.LoadFromRenderText(font, g_screen);
 
     TextManager storyline2;
     storyline2.SetText("on his way to fight against evil entities to protect his world");
     storyline2.SetColor(TextManager::BLACK_TEXT);
-    storyline2.LoadFromRenderText(font_time, g_screen);
+    storyline2.LoadFromRenderText(font, g_screen);
 
     //Instruction Text
     TextManager instruction_text1;
     instruction_text1.SetText("Here are some instructions for you warrior:");
     instruction_text1.SetColor(TextManager::BLACK_TEXT);
-    instruction_text1.LoadFromRenderText(font_time, g_screen);
+    instruction_text1.LoadFromRenderText(font, g_screen);
 
     TextManager instruction_text2;
     instruction_text2.SetText("Press Enter to start the game");
     instruction_text2.SetColor(TextManager::BLACK_TEXT);
-    instruction_text2.LoadFromRenderText(font_time, g_screen);
+    instruction_text2.LoadFromRenderText(font, g_screen);
 
     TextManager instruction_text3;
     instruction_text3.SetText("Press Space to pause the game");
     instruction_text3.SetColor(TextManager::BLACK_TEXT);
-    instruction_text3.LoadFromRenderText(font_time, g_screen);
+    instruction_text3.LoadFromRenderText(font, g_screen);
 
     TextManager instruction_text4;
     instruction_text4.SetText("Press Space again to resume");
     instruction_text4.SetColor(TextManager::BLACK_TEXT);
-    instruction_text4.LoadFromRenderText(font_time, g_screen);
+    instruction_text4.LoadFromRenderText(font, g_screen);
 
 
     //Time Text
@@ -226,7 +226,7 @@ int main(int argc, char* argv[])
     //Start Screen Text
     TextManager click_text;
     click_text.SetText("Press Enter to Play");
-    click_text.SetColor(TextManager::BLACK_TEXT);
+    click_text.SetColor(TextManager::RED_TEXT);
     click_text.LoadFromRenderText(font, g_screen);
 
      //Resume Text
