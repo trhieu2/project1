@@ -464,3 +464,24 @@ void Warrior::UpdateImngWarrior(SDL_Renderer* des)
     }
 }
 
+void Warrior::Reset()
+{
+    frame = 0;
+    x_pos = 0;
+    y_pos = 0;
+    x_val = 0;
+    width_frame = 0;
+    height_frame = 0;
+    status = WALK_NONE;
+    input_type.left = 0;
+    input_type.right = 0;
+    input_type.jump = 0;
+    input_type.down = 0;
+    input_type.up = 0;
+    isgrounded = false;
+    map_x_ = 0;
+    map_y_ = 0;
+    come_back_time = 0;
+    money_count = 0;
+}
+

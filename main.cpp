@@ -430,11 +430,32 @@ int main(int argc, char* argv[])
                       }
                   }
               }
+              int money_count = p_player.GetMoneyCount();
+              std::string money_str = std::to_string(money_count);
+
+              money_game.SetText(money_str);
+              money_game.LoadFromRenderText(font_time, g_screen);
+              money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
               if(is_restart)
               {
                   p_player.Reset();
                   is_restart = false;
                   num_die = 3;
+                  mark_value = 0;
+                money_count = 0;
+
+    // Update the strings used for rendering with the new values
+    std::string val_str_mark = std::to_string(mark_value);
+    std::string strMark("Mark: ");
+    strMark += val_str_mark;
+    mark_game.SetText(strMark);
+    mark_game.LoadFromRenderText(font_time, g_screen);
+    mark_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 50, 15);
+
+    std::string money_str = std::to_string(money_count);
+    money_game.SetText(money_str);
+    money_game.LoadFromRenderText(font_time, g_screen);
+    money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
               }
               int frame_exp_width = exp_threat.get_frame_width();
               int frame_exp_height = exp_threat.get_frame_height();
@@ -516,13 +537,6 @@ int main(int argc, char* argv[])
                   high_score = mark_value;
               }
               RenderHighScore(mark_game, g_screen, font_time);
-
-              int money_count = p_player.GetMoneyCount();
-              std::string money_str = std::to_string(money_count);
-
-              money_game.SetText(money_str);
-              money_game.LoadFromRenderText(font_time, g_screen);
-              money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
 
               SDL_RenderPresent(g_screen);
 
