@@ -10,7 +10,6 @@
 #include "TextManager.h"
 #include "PlayerProperties.h"
 #include "Money.h"
-#include "SDL_mixer.h"
 
 BaseObject g_background;
 BaseObject g_start_screen;

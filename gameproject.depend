@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713983789 source:g:\gameproject\gameproject\main.cpp
+1714052496 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -12,7 +12,6 @@
 	"TextManager.h"
 	"PlayerProperties.h"
 	"Money.h"
-	"SDL_mixer.h"
 
 1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -900,11 +899,13 @@
 	"tinyxml.h"
 	<windows.h>
 
-1713933014 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1714052370 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
+	"SDL_mixer.h"
 
-1713978765 g:\gameproject\gameproject\src\characters\warrior.h
+1714052786 g:\gameproject\gameproject\src\characters\warrior.h
+	"SDL_mixer.h"
 	"SpellObject.h"
 	"GameFunction.h"
 	"BaseObject.h"

@@ -20,6 +20,7 @@ Warrior::Warrior()
     map_y_ = 0;
     come_back_time = 0;
     money_count = 0;
+    jumpSound = Mix_LoadWAV("music/playerjump.wav");
 }
 
 Warrior::~Warrior()
@@ -149,6 +150,7 @@ void Warrior::HandleInput(SDL_Event events, SDL_Renderer* screen)
         if(events.button.button == SDL_BUTTON_RIGHT)
         {
             input_type.jump = 1;
+            Mix_PlayChannel(-1, jumpSound, 0);
         }
         else if(events.button.button == SDL_BUTTON_LEFT)
         {

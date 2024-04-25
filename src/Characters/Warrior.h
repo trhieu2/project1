@@ -1,6 +1,8 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 
+#include "SDL_mixer.h"
+
 #include "SpellObject.h"
 #include "GameFunction.h"
 #include "BaseObject.h"
@@ -72,6 +74,8 @@ class Warrior : public BaseObject
         int map_y_;
 
         int come_back_time;
+
+        Mix_Chunk* jumpSound;
 };
 
 #endif // WARRIOR_H
