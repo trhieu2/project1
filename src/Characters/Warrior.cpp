@@ -23,6 +23,7 @@ Warrior::Warrior()
 
     jumpSound = Mix_LoadWAV("music/playerjump.wav");
     fallingSound = Mix_LoadWAV("music/losing_or_falling.wav");
+    moneySound = Mix_LoadWAV("music/money.wav");
 }
 
 Warrior::~Warrior()
@@ -320,6 +321,7 @@ void Warrior::CheckToMap(Map& map_data)
 
             if(val1 == MONEY || val2 == MONEY)
             {
+                Mix_PlayChannel(-1, moneySound, 0);
                 map_data.tile[y1][x2] = 0;
                 map_data.tile[y2][x2] = 0;
                 IncreaseMoney();
@@ -340,6 +342,7 @@ void Warrior::CheckToMap(Map& map_data)
 
             if(val1 == MONEY || val2 == MONEY)
             {
+                Mix_PlayChannel(-1, moneySound, 0);
                 map_data.tile[y1][x1] = 0;
                 map_data.tile[y2][x1] = 0;
                 IncreaseMoney();
@@ -370,6 +373,7 @@ void Warrior::CheckToMap(Map& map_data)
             int val2 = map_data.tile[y2][x2];
             if(val1 == MONEY || val2 == MONEY)
             {
+                Mix_PlayChannel(-1, moneySound, 0);
                 map_data.tile[y2][x1] = 0;
                 map_data.tile[y2][x2] = 0;
                 IncreaseMoney();
@@ -395,6 +399,7 @@ void Warrior::CheckToMap(Map& map_data)
             int val2 = map_data.tile[y1][x2];
             if(val1 == MONEY || val2 == MONEY)
             {
+                Mix_PlayChannel(-1, moneySound, 0);
                 map_data.tile[y1][x1] = 0;
                 map_data.tile[y1][x2] = 0;
                 IncreaseMoney();

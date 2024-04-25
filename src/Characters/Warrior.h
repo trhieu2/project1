@@ -75,6 +75,7 @@ class Warrior : public BaseObject
 
         Mix_Chunk* jumpSound;
         Mix_Chunk* fallingSound;
+        Mix_Chunk* moneySound;
 };
 
 #endif // WARRIOR_H
