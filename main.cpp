@@ -36,7 +36,7 @@ bool Init()
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
 
-    g_window = SDL_CreateWindow("MISSION CAT", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    g_window = SDL_CreateWindow("MISSION CAT", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
     if(g_window == NULL)
     {
         success = false;
@@ -101,16 +101,15 @@ std::vector<ThreatObjects*> CreateThreatObjects()
 {
     std::vector<ThreatObjects*> list_threats;
 
-    ThreatObjects* dynamic_threats = new ThreatObjects[20];
     for(int i = 0; i < 20; i++)
     {
-        ThreatObjects* p_threat = (dynamic_threats + i);
+        ThreatObjects* p_threat = new ThreatObjects();
         if(p_threat != NULL)
         {
             p_threat->LoadImg("assets/threat_left.png", g_screen);
             p_threat->set_clips();
             p_threat->set_type_move(ThreatObjects::MOVE_IN_SPACE_THREAT);
-            p_threat->set_x_pos(500 + i*500);
+            p_threat->set_x_pos(500 + i * 500);
             p_threat->set_y_pos(200);
 
             int pos1 = p_threat->get_x_pos() - 60;
@@ -121,16 +120,14 @@ std::vector<ThreatObjects*> CreateThreatObjects()
         }
     }
 
-    ThreatObjects* threats_objs = new ThreatObjects[20];
-
     for(int i = 0; i < 20; i++)
     {
-        ThreatObjects* p_threat  = (threats_objs + i);
+        ThreatObjects* p_threat = new ThreatObjects();
         if(p_threat != NULL)
         {
             p_threat->LoadImg("assets/threat_level.png", g_screen);
             p_threat->set_clips();
-            p_threat->set_x_pos(300 + i*1200);
+            p_threat->set_x_pos(300 + i * 1200);
             p_threat->set_y_pos(250);
             p_threat->set_type_move(ThreatObjects::STATIC_THREAT);
             p_threat->set_input_left(0);
@@ -138,11 +135,35 @@ std::vector<ThreatObjects*> CreateThreatObjects()
             SpellObject* p_spell = new SpellObject();
             p_threat->InitSpell(p_spell, g_screen);
 
-
             list_threats.push_back(p_threat);
         }
     }
     return list_threats;
+}
+
+void CleanUp(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font, TTF_Font* titleFont, Mix_Music* startMusic, Mix_Music* inGameMusic) {
+    if (renderer) {
+        SDL_DestroyRenderer(renderer);
+    }
+    if (window) {
+        SDL_DestroyWindow(window);
+    }
+    if (font) {
+        TTF_CloseFont(font);
+    }
+    if (titleFont) {
+        TTF_CloseFont(titleFont);
+    }
+    if (startMusic) {
+        Mix_FreeMusic(startMusic);
+    }
+    if (inGameMusic) {
+        Mix_FreeMusic(inGameMusic);
+    }
+    Mix_Quit();
+    TTF_Quit();
+    IMG_Quit();
+    SDL_Quit();
 }
 
 int main(int argc, char* argv[])
@@ -292,6 +313,8 @@ int main(int argc, char* argv[])
             }
         }
     }
+    SDL_SetRenderDrawColor(g_screen, 0xFF, 0xFF, 0xFF, 0xFF);
+    SDL_RenderClear(g_screen);
 
     Mix_HaltMusic();
 
@@ -338,8 +361,14 @@ int main(int argc, char* argv[])
                         }
                     }
                 }
+                else if(g_event.key.keysym.sym == SDLK_ESCAPE)
+                {
+                    is_quit = true;
+                }
                 p_player.HandleInput(g_event, g_screen);
               }
+              SDL_SetRenderDrawColor(g_screen, 0xFF, 0xFF, 0xFF, 0xFF);
+              SDL_RenderClear(g_screen);
               if (is_paused)
               {
                     int textWidth = resume_text.GetWidth();
@@ -350,7 +379,6 @@ int main(int argc, char* argv[])
                     resume_text.RenderTextt(g_screen, textX, textY);
                     SDL_RenderPresent(g_screen);
                     continue;
-
               }
               SDL_SetRenderDrawColor(g_screen, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR);
               SDL_RenderClear(g_screen);
@@ -430,33 +458,36 @@ int main(int argc, char* argv[])
                       }
                   }
               }
+
+
               int money_count = p_player.GetMoneyCount();
               std::string money_str = std::to_string(money_count);
 
               money_game.SetText(money_str);
               money_game.LoadFromRenderText(font_time, g_screen);
               money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
+
               if(is_restart)
               {
                   p_player.Reset();
                   is_restart = false;
                   num_die = 3;
                   mark_value = 0;
-                money_count = 0;
+                  money_count = 0;
 
-    // Update the strings used for rendering with the new values
-    std::string val_str_mark = std::to_string(mark_value);
-    std::string strMark("Mark: ");
-    strMark += val_str_mark;
-    mark_game.SetText(strMark);
-    mark_game.LoadFromRenderText(font_time, g_screen);
-    mark_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 50, 15);
+                  std::string val_str_mark = std::to_string(mark_value);
+                  std::string strMark("Mark: ");
+                  strMark += val_str_mark;
+                  mark_game.SetText(strMark);
+                  mark_game.LoadFromRenderText(font_time, g_screen);
+                  mark_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 50, 15);
 
-    std::string money_str = std::to_string(money_count);
-    money_game.SetText(money_str);
-    money_game.LoadFromRenderText(font_time, g_screen);
-    money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
+                  std::string money_str = std::to_string(money_count);
+                  money_game.SetText(money_str);
+                  money_game.LoadFromRenderText(font_time, g_screen);
+                  money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
               }
+
               int frame_exp_width = exp_threat.get_frame_width();
               int frame_exp_height = exp_threat.get_frame_height();
 
@@ -562,7 +593,12 @@ int main(int argc, char* argv[])
         }
     }
 
+    for (int i = 0; i < threats_list.size(); ++i) {
+    delete threats_list[i];
+}
+
     threats_list.clear();
     Close();
+    CleanUp(g_window, g_screen, font, title_font, startScreenMusic, inGameMusic);
     return 0;
 }

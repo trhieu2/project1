@@ -108,7 +108,7 @@ void ThreatObjects::DoPlayer(Map& map_data)
 
 void ThreatObjects::InitThreats()
 {
-    x_val = 0;
+            x_val = 0;
             y_val = 0;
             if(x_pos > 256)
             {
@@ -310,6 +310,7 @@ void ThreatObjects::RemoveSpell(const int& indx)
         }
     }
 }
+
 
 
 

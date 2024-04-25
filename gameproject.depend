@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714056799 source:g:\gameproject\gameproject\main.cpp
+1714066294 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -1021,10 +1021,10 @@
 1713707038 source:g:\gameproject\gameproject\src\spell\spellobject.cpp
 	"SpellObject.h"
 
-1713681648 source:g:\gameproject\gameproject\src\characters\threatobjects.cpp
+1714060110 source:g:\gameproject\gameproject\src\characters\threatobjects.cpp
 	"ThreatObjects.h"
 
-1713681648 g:\gameproject\gameproject\src\characters\threatobjects.h
+1714060110 g:\gameproject\gameproject\src\characters\threatobjects.h
 	"GameFunction.h"
 	"BaseObject.h"
 	"SpellObject.h"
@@ -1104,4 +1104,14 @@
 
 1713973675 g:\gameproject\gameproject\src\button\button.h
 	<SDL.h>
+
+1714063097 source:g:\gameproject\gameproject\src\playerproperties\cherry.cpp
+	"Cherry.h"
+
+1714063089 g:\gameproject\gameproject\src\playerproperties\cherry.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<cstdlib>
+	<ctime>
 
