@@ -74,6 +74,7 @@ class Warrior : public BaseObject
         int come_back_time;
 
         Mix_Chunk* jumpSound;
+        Mix_Chunk* fallingSound;
 };
 
 #endif // WARRIOR_H

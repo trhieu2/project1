@@ -22,6 +22,7 @@ Warrior::Warrior()
     money_count = 0;
 
     jumpSound = Mix_LoadWAV("music/playerjump.wav");
+    fallingSound = Mix_LoadWAV("music/losing_or_falling.wav");
 }
 
 Warrior::~Warrior()
@@ -422,6 +423,7 @@ void Warrior::CheckToMap(Map& map_data)
     }
     if(y_pos > map_data.max_y)
     {
+        Mix_PlayChannel(-1, fallingSound, 0);
         come_back_time  = 60;
     }
 }
