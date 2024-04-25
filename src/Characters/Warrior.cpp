@@ -20,6 +20,7 @@ Warrior::Warrior()
     map_y_ = 0;
     come_back_time = 0;
     money_count = 0;
+
     jumpSound = Mix_LoadWAV("music/playerjump.wav");
 }
 

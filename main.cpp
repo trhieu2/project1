@@ -258,9 +258,6 @@ int main(int argc, char* argv[])
 
     Mix_Music *startScreenMusic = Mix_LoadMUS("music/hurry_up_and_run.mp3");
     Mix_Music *inGameMusic = Mix_LoadMUS("music/dark-happy-world.mp3");
-    Mix_Music *jumpsound = Mix_LoadMUS("music/jumping.mp3");
-    Mix_Music *losesound = Mix_LoadMUS("music/losing.mp3");
-    Mix_Music *collidesound = Mix_LoadMUS("music/threat_collide.mp3");
 
     if(startScreenMusic == NULL || inGameMusic == NULL) {
         printf("Failed to load music! SDL_mixer Error: %s\n", Mix_GetError());

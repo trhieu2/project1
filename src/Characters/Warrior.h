@@ -1,8 +1,6 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 
-#include "SDL_mixer.h"
-
 #include "SpellObject.h"
 #include "GameFunction.h"
 #include "BaseObject.h"

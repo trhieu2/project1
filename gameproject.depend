@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714052496 source:g:\gameproject\gameproject\main.cpp
+1714053605 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -899,13 +899,11 @@
 	"tinyxml.h"
 	<windows.h>
 
-1714052370 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1714053432 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
-	"SDL_mixer.h"
 
-1714052786 g:\gameproject\gameproject\src\characters\warrior.h
-	"SDL_mixer.h"
+1714053634 g:\gameproject\gameproject\src\characters\warrior.h
 	"SpellObject.h"
 	"GameFunction.h"
 	"BaseObject.h"
@@ -986,18 +984,19 @@
 1712906681 g:\gameproject\gameproject\src\physics\collision.h
 	"SDL.h"
 
-1713932132 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
+1714053831 source:g:\gameproject\gameproject\src\funcs\gamefunction.cpp
 	"GameFunction.h"
 	"TextManager.h"
 	<math.h>
 
-1713931906 g:\gameproject\gameproject\src\funcs\gamefunction.h
+1714053744 g:\gameproject\gameproject\src\funcs\gamefunction.h
 	<windows.h>
 	<string>
 	<vector>
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
+	<SDL_mixer.h>
 
 1713784240 source:g:\gameproject\gameproject\src\object\baseobject.cpp
 	"BaseObject.h"
