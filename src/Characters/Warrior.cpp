@@ -20,6 +20,7 @@ Warrior::Warrior()
     map_y_ = 0;
     come_back_time = 0;
     money_count = 0;
+    game_won = false;
 
     jumpSound = Mix_LoadWAV("music/playerjump.wav");
     fallingSound = Mix_LoadWAV("music/losing_or_falling.wav");
@@ -412,6 +413,12 @@ void Warrior::CheckToMap(Map& map_data)
                 y_val = 0;
             }
             }
+        }
+    }
+
+    if (x1 >= 0 && x2 < MAX_X && y1 >= 0 && y2 < MAX_Y) {
+        if (map_data.tile[y1][x1] == 10 || map_data.tile[y2][x2] == 10) {
+            game_won = true;
         }
     }
 

@@ -45,6 +45,9 @@ class Warrior : public BaseObject
         void set_comeback_time(const int& cbtime){come_back_time = cbtime;}
         int GetMoneyCount() const {return money_count;}
         void Reset();
+        bool IsGameWon() const{
+        return game_won;
+        }
     private:
         int money_count ;
         std::vector<SpellObject*> p_spell_list;
@@ -68,6 +71,8 @@ class Warrior : public BaseObject
         int map_y_;
 
         int come_back_time;
+
+        bool game_won;
 
         Mix_Chunk* jumpSound;
         Mix_Chunk* fallingSound;

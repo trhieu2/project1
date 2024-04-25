@@ -459,7 +459,6 @@ int main(int argc, char* argv[])
                   }
               }
 
-
               int money_count = p_player.GetMoneyCount();
               std::string money_str = std::to_string(money_count);
 
@@ -486,6 +485,19 @@ int main(int argc, char* argv[])
                   money_game.SetText(money_str);
                   money_game.LoadFromRenderText(font_time, g_screen);
                   money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
+              }
+
+              if(p_player.IsGameWon())
+              {
+                  TextManager win_text;
+                  win_text.SetText("YOU WIN");
+                  win_text.SetColor(TextManager::BLACK_TEXT);
+                  win_text.LoadFromRenderText(font, g_screen);
+                  int win_text_width = win_text.GetWidth();
+                  int win_text_height = win_text.GetHeight();
+                  int win_text_x = (SCREEN_WIDTH - win_text_width) / 2;
+                  int win_text_y = (SCREEN_HEIGHT - win_text_height) / 2;
+                  win_text.RenderTextt(g_screen, win_text_x, win_text_y);
               }
 
               int frame_exp_width = exp_threat.get_frame_width();
