@@ -10,6 +10,7 @@
 #include "TextManager.h"
 #include "PlayerProperties.h"
 #include "Money.h"
+#include "Button.h"
 
 BaseObject g_background;
 BaseObject g_start_screen;
@@ -168,6 +169,7 @@ void CleanUp(SDL_Window* window, SDL_Renderer* renderer, TTF_Font* font, TTF_Fon
 
 int main(int argc, char* argv[])
 {
+
     Timer fps_timer;
 
     if(Init() == false)
@@ -182,6 +184,12 @@ int main(int argc, char* argv[])
     TTF_Font* font = TTF_OpenFont("font/kaph.ttf", 20);
 
     TTF_Font* title_font = TTF_OpenFont("font/kaph.ttf", 35);
+
+    Button playButton(g_screen, "buttons/play1.png", "buttons/play2.png", 560, 200, 1);
+    Button InformationButton(g_screen, "buttons/infor1.png", "buttons/infor2.png",560, 270, 1);
+    Button homeButton(g_screen, "buttons/home1.png", "buttons/home2.png", 50, 50, 0.5);
+    Button soundButton(g_screen, "buttons/music1.png", "buttons/music2.png", 560, 340, 1);
+    Button mutedSoundButton(g_screen, "buttons/music3.png", "buttons/music4.png", 560, 340, 1);
 
     //Loading map
     GmeMap game_map;
@@ -216,39 +224,6 @@ int main(int argc, char* argv[])
     title.SetColor(TextManager::RED_TEXT);
     title.LoadFromRenderText(title_font, g_screen);
 
-    //Story line Text
-    TextManager storyline1;
-    storyline1.SetText("STORY LINE: In this world, you are a little yellow cat who is");
-    storyline1.SetColor(TextManager::BLACK_TEXT);
-    storyline1.LoadFromRenderText(font, g_screen);
-
-    TextManager storyline2;
-    storyline2.SetText("on his way to fight against evil entities to protect his world");
-    storyline2.SetColor(TextManager::BLACK_TEXT);
-    storyline2.LoadFromRenderText(font, g_screen);
-
-    //Instruction Text
-    TextManager instruction_text1;
-    instruction_text1.SetText("Here are some instructions for you warrior:");
-    instruction_text1.SetColor(TextManager::BLACK_TEXT);
-    instruction_text1.LoadFromRenderText(font, g_screen);
-
-    TextManager instruction_text2;
-    instruction_text2.SetText("Press Enter to start the game");
-    instruction_text2.SetColor(TextManager::BLACK_TEXT);
-    instruction_text2.LoadFromRenderText(font, g_screen);
-
-    TextManager instruction_text3;
-    instruction_text3.SetText("Press Space to pause the game");
-    instruction_text3.SetColor(TextManager::BLACK_TEXT);
-    instruction_text3.LoadFromRenderText(font, g_screen);
-
-    TextManager instruction_text4;
-    instruction_text4.SetText("Press Space again to resume");
-    instruction_text4.SetColor(TextManager::BLACK_TEXT);
-    instruction_text4.LoadFromRenderText(font, g_screen);
-
-
     //Time Text
     TextManager time_game;
     time_game.SetColor(TextManager::WHITE_TEXT);
@@ -259,12 +234,6 @@ int main(int argc, char* argv[])
 
     TextManager money_game;
     money_game.SetColor(TextManager::WHITE_TEXT);
-
-    //Start Screen Text
-    TextManager click_text;
-    click_text.SetText("Press Enter to Play");
-    click_text.SetColor(TextManager::RED_TEXT);
-    click_text.LoadFromRenderText(font, g_screen);
 
      //Resume Text
     TextManager resume_text;
@@ -279,42 +248,105 @@ int main(int argc, char* argv[])
 
     Mix_Music *startScreenMusic = Mix_LoadMUS("music/hurry_up_and_run.mp3");
     Mix_Music *inGameMusic = Mix_LoadMUS("music/dark-happy-world.mp3");
+    Mix_Chunk * winningMusic = Mix_LoadWAV("music/winning.wav");
 
     if(startScreenMusic == NULL || inGameMusic == NULL) {
         printf("Failed to load music! SDL_mixer Error: %s\n", Mix_GetError());
     }
 
-    bool start_game = false;
-    while (!start_game) {
-        background.Render(g_screen, NULL);
+    enum GameState{
+        START_SCREEN,
+        PLAYING,
+        SHOWING_INSTRUCTIONS,
+    };
 
+    GameState game_state = START_SCREEN;
+
+    bool isMusicMuted = false;
+
+    while (game_state != PLAYING) {
+        background.Render(g_screen, NULL);
         if(!Mix_PlayingMusic())
         {
             Mix_PlayMusic(startScreenMusic, -1);
         }
 
         title.RenderTextt(g_screen, (SCREEN_WIDTH - title.GetWidth()) / 2, 50);
-        storyline1.RenderTextt(g_screen, (SCREEN_WIDTH - storyline1.GetWidth()) / 2, 100);
-        storyline2.RenderTextt(g_screen, (SCREEN_WIDTH - storyline2.GetWidth()) / 2, 150);
-        instruction_text1.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text1.GetWidth()) / 2, 200);
-        instruction_text2.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text2.GetWidth()) / 2, 250);
-        instruction_text3.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text3.GetWidth()) / 2, 300);
-        instruction_text4.RenderTextt(g_screen, (SCREEN_WIDTH - instruction_text4.GetWidth()) / 2, 350);
 
-        click_text.RenderTextt(g_screen, (SCREEN_WIDTH - click_text.GetWidth())/2, 420);
+        int mouseX, mouseY;
+        SDL_GetMouseState(&mouseX, &mouseY);
+        bool isplayHovered = playButton.isHovered(mouseX, mouseY);
+        bool isinforHovered = InformationButton.isHovered(mouseX, mouseY);
+        bool isHomeHovered = homeButton.isHovered(mouseX, mouseY);
+        bool isMusicHovered = soundButton.isHovered(mouseX, mouseY);
+        bool isMusicMutedHovered = mutedSoundButton.isHovered(mouseX, mouseY);
+
+        if(game_state == START_SCREEN)
+        {
+            playButton.render(g_screen, isplayHovered);
+            InformationButton.render(g_screen, isinforHovered);
+            soundButton.render(g_screen, isMusicHovered);
+
+            if(isMusicMuted)
+            {
+                mutedSoundButton.render(g_screen, mutedSoundButton.isHovered(mouseX, mouseY));
+            }
+        }
+        else if(game_state == SHOWING_INSTRUCTIONS)
+        {
+            homeButton.render(g_screen, isHomeHovered);
+        }
+        else if(game_state == PLAYING)
+        {
+            homeButton.render(g_screen, isHomeHovered);
+        }
         SDL_RenderPresent(g_screen);
 
         while (SDL_PollEvent(&g_event) != 0) {
             if (g_event.type == SDL_QUIT) {
-                start_game = true;
+                game_state = PLAYING;
             }
             else if (g_event.type == SDL_KEYDOWN && g_event.key.keysym.sym == SDLK_RETURN) {
-                start_game = true;
+                game_state = PLAYING;
+            }
+            else if(g_event.type == SDL_MOUSEBUTTONDOWN)
+            {
+                int x,y;
+                SDL_GetMouseState(&x, &y);
+                if(playButton.isClicked(x, y) && game_state == START_SCREEN)
+                {
+                    game_state = PLAYING;
+                }
+                if(InformationButton.isClicked(x, y) && game_state == START_SCREEN)
+                {
+                    game_state = SHOWING_INSTRUCTIONS;
+                }
+                if(homeButton.isClicked(x,y) && (game_state == SHOWING_INSTRUCTIONS || game_state == PLAYING))
+                {
+                    game_state = START_SCREEN;
+                }
+                if(soundButton.isClicked(x,y) && game_state == START_SCREEN)
+                {
+                    isMusicMuted = !isMusicMuted;
+                    if(isMusicMuted)
+                    {
+                        Mix_PauseMusic();
+                    }
+                    else
+                    {
+                        Mix_ResumeMusic();
+                    }
+                }
             }
         }
     }
-    SDL_SetRenderDrawColor(g_screen, 0xFF, 0xFF, 0xFF, 0xFF);
-    SDL_RenderClear(g_screen);
+
+    int mouseX, mouseY;
+    SDL_GetMouseState(&mouseX, &mouseY);
+
+    bool isHomeHovered = homeButton.isHovered(mouseX, mouseY);
+
+    homeButton.render(g_screen, isHomeHovered);
 
     Mix_HaltMusic();
 
@@ -334,6 +366,10 @@ int main(int argc, char* argv[])
     while(!is_quit)
     {
         fps_timer.start();
+        if(isMusicMuted)
+        {
+            Mix_HaltMusic();
+        }
         while(SDL_PollEvent(&g_event) !=0)
               {
                   if(g_event.type == SDL_QUIT)
@@ -350,13 +386,15 @@ int main(int argc, char* argv[])
                             if(Mix_PlayingMusic() != 0)
                             {
                             Mix_HaltMusic();
+                            ingamemusic_playing = false;
                             }
                         }
                         else
                         {
-                            if(Mix_PlayingMusic() == 0)
+                            if(Mix_PlayingMusic() == 0 &&!isMusicMuted)
                             {
                             Mix_PlayMusic(inGameMusic, -1);
+                            ingamemusic_playing = true;
                             }
                         }
                     }
@@ -488,6 +526,7 @@ int main(int argc, char* argv[])
 
               if(p_player.IsGameWon())
               {
+                  Mix_PlayChannel(-1, winningMusic, 0);
                   TextManager win_text;
                   win_text.SetText("YOU WIN");
                   win_text.SetColor(TextManager::BLACK_TEXT);

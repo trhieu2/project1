@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714097030 source:g:\gameproject\gameproject\main.cpp
+1714116530 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -12,6 +12,7 @@
 	"TextManager.h"
 	"PlayerProperties.h"
 	"Money.h"
+	"Button.h"
 
 1711425919 c:\users\hirai\downloads\sdl2-devel-2.30.1-mingw\sdl2-2.30.1\i686-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -899,7 +900,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1714097779 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1714097827 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
 
@@ -1102,8 +1103,9 @@
 1713972877 source:g:\gameproject\gameproject\src\button\button.cpp
 	"Button.h"
 
-1713973675 g:\gameproject\gameproject\src\button\button.h
+1714103552 g:\gameproject\gameproject\src\button\button.h
 	<SDL.h>
+	<SDL_image.h>
 
 1714063097 source:g:\gameproject\gameproject\src\playerproperties\cherry.cpp
 	"Cherry.h"
