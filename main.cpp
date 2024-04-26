@@ -109,7 +109,7 @@ std::vector<ThreatObjects*> CreateThreatObjects()
             p_threat->LoadImg("assets/threat_left.png", g_screen);
             p_threat->set_clips();
             p_threat->set_type_move(ThreatObjects::MOVE_IN_SPACE_THREAT);
-            p_threat->set_x_pos(500 + i * 500);
+            p_threat->set_x_pos(500 + i * 300);
             p_threat->set_y_pos(200);
 
             int pos1 = p_threat->get_x_pos() - 60;
@@ -127,7 +127,7 @@ std::vector<ThreatObjects*> CreateThreatObjects()
         {
             p_threat->LoadImg("assets/threat_level.png", g_screen);
             p_threat->set_clips();
-            p_threat->set_x_pos(300 + i * 1200);
+            p_threat->set_x_pos(300 + i * 1000);
             p_threat->set_y_pos(250);
             p_threat->set_type_move(ThreatObjects::STATIC_THREAT);
             p_threat->set_input_left(0);
@@ -367,8 +367,6 @@ int main(int argc, char* argv[])
                 }
                 p_player.HandleInput(g_event, g_screen);
               }
-              SDL_SetRenderDrawColor(g_screen, 0xFF, 0xFF, 0xFF, 0xFF);
-              SDL_RenderClear(g_screen);
               if (is_paused)
               {
                     int textWidth = resume_text.GetWidth();
@@ -485,6 +483,7 @@ int main(int argc, char* argv[])
                   money_game.SetText(money_str);
                   money_game.LoadFromRenderText(font_time, g_screen);
                   money_game.RenderTextt(g_screen, SCREEN_WIDTH*0.5 - 250, 15);
+
               }
 
               if(p_player.IsGameWon())

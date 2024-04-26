@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714067759 source:g:\gameproject\gameproject\main.cpp
+1714097030 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -899,7 +899,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1714067543 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1714097779 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
 

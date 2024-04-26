@@ -149,14 +149,23 @@ void Warrior::HandleInput(SDL_Event events, SDL_Renderer* screen)
             break;
         }
     }
+
+    if(events.type == SDL_KEYDOWN)
+    {
+    if(events.key.keysym.sym == SDLK_UP)
+    {
+        input_type.jump = 1;
+        Mix_PlayChannel(-1, jumpSound, 0);
+    }
+    else if(events.key.keysym.sym == SDLK_DOWN)
+    {
+        y_val = MAX_GRAVITY*2;
+    }
+    }
+
     if(events.type == SDL_MOUSEBUTTONDOWN)
     {
-        if(events.button.button == SDL_BUTTON_RIGHT)
-        {
-            input_type.jump = 1;
-            Mix_PlayChannel(-1, jumpSound, 0);
-        }
-        else if(events.button.button == SDL_BUTTON_LEFT)
+        if(events.button.button == SDL_BUTTON_LEFT)
         {
             SpellObject* p_spell = new SpellObject();
             p_spell->set_spell_type(SpellObject::NORING);
