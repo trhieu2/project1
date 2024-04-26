@@ -31,6 +31,7 @@
 					<Add directory="src/GameState" />
 					<Add directory="src/Buttons" />
 					<Add directory="src/States" />
+					<Add directory="src/Button" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main -lSDL2" />
@@ -72,6 +73,7 @@
 					<Add directory="src/GameState" />
 					<Add directory="src/Buttons" />
 					<Add directory="src/States" />
+					<Add directory="src/Button" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -90,6 +92,7 @@
 			<Add directory="C:/Users/hirai/Downloads/SDL2_image-devel-2.8.2-mingw/SDL2_image-2.8.2/x86_64-w64-mingw32/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Button/Button.h" />
 		<Unit filename="src/Characters/ThreatObjects.cpp" />
 		<Unit filename="src/Characters/ThreatObjects.h" />
 		<Unit filename="src/Characters/Warrior.cpp" />

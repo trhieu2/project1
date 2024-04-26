@@ -187,9 +187,9 @@ int main(int argc, char* argv[])
 
     Button playButton(g_screen, "buttons/play1.png", "buttons/play2.png", 560, 200, 1);
     Button InformationButton(g_screen, "buttons/infor1.png", "buttons/infor2.png",560, 270, 1);
-    Button homeButton(g_screen, "buttons/home1.png", "buttons/home2.png", 50, 50, 0.5);
     Button soundButton(g_screen, "buttons/music1.png", "buttons/music2.png", 560, 340, 1);
     Button mutedSoundButton(g_screen, "buttons/music3.png", "buttons/music4.png", 560, 340, 1);
+    Button backButton(g_screen, "buttons/back1.png", "buttons/back2.png", 50, 50, 1);
 
     //Loading map
     GmeMap game_map;
@@ -258,6 +258,7 @@ int main(int argc, char* argv[])
         START_SCREEN,
         PLAYING,
         SHOWING_INSTRUCTIONS,
+        BACK_TO_START,
     };
 
     GameState game_state = START_SCREEN;
@@ -277,9 +278,9 @@ int main(int argc, char* argv[])
         SDL_GetMouseState(&mouseX, &mouseY);
         bool isplayHovered = playButton.isHovered(mouseX, mouseY);
         bool isinforHovered = InformationButton.isHovered(mouseX, mouseY);
-        bool isHomeHovered = homeButton.isHovered(mouseX, mouseY);
         bool isMusicHovered = soundButton.isHovered(mouseX, mouseY);
         bool isMusicMutedHovered = mutedSoundButton.isHovered(mouseX, mouseY);
+        bool isBackHovered = backButton.isHovered(mouseX, mouseY);
 
         if(game_state == START_SCREEN)
         {
@@ -292,13 +293,75 @@ int main(int argc, char* argv[])
                 mutedSoundButton.render(g_screen, mutedSoundButton.isHovered(mouseX, mouseY));
             }
         }
-        else if(game_state == SHOWING_INSTRUCTIONS)
+        else if(game_state == SHOWING_INSTRUCTIONS || game_state == BACK_TO_START)
         {
-            homeButton.render(g_screen, isHomeHovered);
-        }
-        else if(game_state == PLAYING)
-        {
-            homeButton.render(g_screen, isHomeHovered);
+                  backButton.render(g_screen, isBackHovered);
+                  TextManager instruc_text1;
+                  instruc_text1.SetText("PRESS UP TO JUMP");
+
+                  instruc_text1.SetColor(TextManager::WHITE_TEXT);
+                  instruc_text1.LoadFromRenderText(font, g_screen);
+                  int instruc_text1_width = instruc_text1.GetWidth();
+                  int instruc_text1_height = instruc_text1.GetHeight();
+                  int instruc_text1_x = (SCREEN_WIDTH - instruc_text1_width) / 2;
+                  int instruc_text1_y = (SCREEN_HEIGHT - instruc_text1_height) / 2;
+                  instruc_text1.RenderTextt(g_screen, instruc_text1_x, instruc_text1_y - 140);
+
+                  TextManager instruc_text2;
+                  instruc_text2.SetText("PRESS DOWN TO GET DOWN");
+
+                  instruc_text2.SetColor(TextManager::BLACK_TEXT);
+                  instruc_text2.LoadFromRenderText(font, g_screen);
+                  int instruc_text2_width = instruc_text2.GetWidth();
+                  int instruc_text2_height = instruc_text2.GetHeight();
+                  int instruc_text2_x = (SCREEN_WIDTH - instruc_text2_width) / 2;
+                  int instruc_text2_y = (SCREEN_HEIGHT - instruc_text2_height) / 2;
+                  instruc_text2.RenderTextt(g_screen, instruc_text2_x, instruc_text2_y - 70);
+
+                  TextManager instruc_text3;
+                  instruc_text3.SetText("PRESS ENTER TO PAUSE THE GAME");
+
+                  instruc_text3.SetColor(TextManager::BLACK_TEXT);
+                  instruc_text3.LoadFromRenderText(font, g_screen);
+                  int instruc_text3_width = instruc_text3.GetWidth();
+                  int instruc_text3_height = instruc_text3.GetHeight();
+                  int instruc_text3_x = (SCREEN_WIDTH - instruc_text3_width) / 2;
+                  int instruc_text3_y = (SCREEN_HEIGHT - instruc_text3_height) / 2;
+                  instruc_text3.RenderTextt(g_screen, instruc_text3_x, instruc_text3_y);
+
+                  TextManager instruc_text4;
+                  instruc_text4.SetText("PRESS ESC TO QUIT");
+
+                  instruc_text4.SetColor(TextManager::BLACK_TEXT);
+                  instruc_text4.LoadFromRenderText(font, g_screen);
+                  int instruc_text4_width = instruc_text4.GetWidth();
+                  int instruc_text4_height = instruc_text4.GetHeight();
+                  int instruc_text4_x = (SCREEN_WIDTH - instruc_text4_width) / 2;
+                  int instruc_text4_y = (SCREEN_HEIGHT - instruc_text4_height) / 2;
+                  instruc_text4.RenderTextt(g_screen, instruc_text4_x, instruc_text4_y + 70);
+
+                  TextManager instruc_text5;
+                  instruc_text5.SetText("PRESS LEFT/RIGHT TO MOVE LEFT/RIGHT");
+
+                  instruc_text5.SetColor(TextManager::BLACK_TEXT);
+                  instruc_text5.LoadFromRenderText(font, g_screen);
+                  int instruc_text5_width = instruc_text5.GetWidth();
+                  int instruc_text5_height = instruc_text5.GetHeight();
+                  int instruc_text5_x = (SCREEN_WIDTH - instruc_text5_width) / 2;
+                  int instruc_text5_y = (SCREEN_HEIGHT - instruc_text5_height) / 2;
+                  instruc_text5.RenderTextt(g_screen, instruc_text5_x, instruc_text5_y + 140);
+
+                  TextManager instruc_text6;
+                  instruc_text6.SetText("RIGHT CLICK TO ATTACK");
+
+                  instruc_text6.SetColor(TextManager::BLACK_TEXT);
+                  instruc_text6.LoadFromRenderText(font, g_screen);
+                  int instruc_text6_width = instruc_text6.GetWidth();
+                  int instruc_text6_height = instruc_text6.GetHeight();
+                  int instruc_text6_x = (SCREEN_WIDTH - instruc_text6_width) / 2;
+                  int instruc_text6_y = (SCREEN_HEIGHT - instruc_text6_height) / 2;
+                  instruc_text6.RenderTextt(g_screen, instruc_text6_x, instruc_text6_y + 210);
+
         }
         SDL_RenderPresent(g_screen);
 
@@ -321,7 +384,7 @@ int main(int argc, char* argv[])
                 {
                     game_state = SHOWING_INSTRUCTIONS;
                 }
-                if(homeButton.isClicked(x,y) && (game_state == SHOWING_INSTRUCTIONS || game_state == PLAYING))
+                if(backButton.isClicked(x,y) && (game_state == SHOWING_INSTRUCTIONS))
                 {
                     game_state = START_SCREEN;
                 }
@@ -340,14 +403,7 @@ int main(int argc, char* argv[])
             }
         }
     }
-
-    int mouseX, mouseY;
-    SDL_GetMouseState(&mouseX, &mouseY);
-
-    bool isHomeHovered = homeButton.isHovered(mouseX, mouseY);
-
-    homeButton.render(g_screen, isHomeHovered);
-
+    //Game Starts
     Mix_HaltMusic();
 
     SDL_RenderClear(g_screen);
@@ -363,9 +419,10 @@ int main(int argc, char* argv[])
         ingamemusic_playing = true;
     }
 
-    while(!is_quit)
+    while(is_quit == false)
     {
         fps_timer.start();
+
         if(isMusicMuted)
         {
             Mix_HaltMusic();

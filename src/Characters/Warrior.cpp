@@ -159,7 +159,7 @@ void Warrior::HandleInput(SDL_Event events, SDL_Renderer* screen)
     }
     else if(events.key.keysym.sym == SDLK_DOWN)
     {
-        y_val = MAX_GRAVITY*2;
+        y_val = MAX_GRAVITY*5;
     }
     }
 

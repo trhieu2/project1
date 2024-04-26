@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714116530 source:g:\gameproject\gameproject\main.cpp
+1714127848 source:g:\gameproject\gameproject\main.cpp
 	<iostream>
 	<string>
 	"GameFunction.h"
@@ -900,7 +900,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1714097827 source:g:\gameproject\gameproject\src\characters\warrior.cpp
+1714127965 source:g:\gameproject\gameproject\src\characters\warrior.cpp
 	"Warrior.h"
 	"BaseObject.h"
 
@@ -1103,7 +1103,7 @@
 1713972877 source:g:\gameproject\gameproject\src\button\button.cpp
 	"Button.h"
 
-1714103552 g:\gameproject\gameproject\src\button\button.h
+1714129723 g:\gameproject\gameproject\src\button\button.h
 	<SDL.h>
 	<SDL_image.h>
 
